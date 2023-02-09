@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>07_이미지 관련 태그</title>
+    </head>
+    <body>
+        <h1>img 태그</h1>
+        <pre>
+        - 웹 문서에 사진, 그림같은 이미지를 삽입하는 용도의 태그
+
+        [속성]
+        1) src : 삽입할 이미지의 경로를 지정하는 속성(파일경로, 웹주소)
+        2) width / height : 이미지의 크기를 지정하는 속성
+        3) alt : 이미지를 설명하는 속성 -> 이미지가 출력되지 않는 경우 화면에 직접 표시
+        (웹접근성)        
+        </pre>
+
+        <hr>
+
+        <h3>src 속성 확인</h3>
+
+        <!-- 
+            상대경로 : 현재 위치를 기준으로 경로 지정
+            .. : 상위 폴더
+            / : 아래, 안쪽, 안에
+         -->
+
+        <img src="./image/img/고양이.jpg" alt="야옹">
+
+        <hr>
+
+        <!-- 웹 이미지 경로(웹상 절대 경로)를 이용해서 이미지 출력 -->
+        <img src="http://www.chemicalnews.co.kr/news/photo/202106/3636_10174_4958.jpg">
+        
+        <hr><hr>
+        <h2>width, height 속성을 이용한 크기 조절(고정/가변 크기)</h2>
+
+        <h4>고정 크기 단위(px) : 화면의 크기 상관 없이 지정된 값의 크기를 갖는 단위</h4>
+
+        <!-- img 태그 inline 형식 -->
+        <img src="./image/img/길막.jpg" width="300px" height="240px">
+        <img src="./image/img/야통.jpg" width="300px" height="240px">
+        <img src="./image/img/연님.jpg" width="300px" height="240px">
+        <img src="./image/img/삼색.jpg" width="300px" height="240px">
+        <img src="./image/img/도도.jpg" width="300px" height="240px">
+
+        <hr>
+
+        <h4>가변 크기 단위(%) : 화면이나 영역 기준 사이트 크기에 따라 크기 변경되는 단위</h4>
+
+        <img src="./image/img/동글.png" width="15%">
+        <img src="./image/img/마를린.jpg" width="15%">
+        <img src="./image/img/무.jpg" width="15%">
+        <img src="./image/img/카오.png" width="15%">
+        <img src="./image/img/작삼.png" width="15%">
+
+        <hr>
+
+        <h2>alt 속성 확인</h2>
+        <img src="./image/고양이.jpg" alt="야옹">
+    </body>
+</html>
