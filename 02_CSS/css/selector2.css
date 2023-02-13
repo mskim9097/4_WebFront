@@ -1,0 +1,132 @@
+/*
+    CSS 파일
+    파일 전체가 <style> 태그 내부라고 생각하면 됨
+*/
+
+/* 기본 속성 선택자*/
+div[name="name-1"] {
+    background-color: orange;
+}
+
+[name="name-2"] { background-color: blue; }
+
+p[name="name-1"] {background-color: green;}
+
+
+/* 자식 선택자 */
+#parent-ul > li { background-color: orange;}
+#parent-ul > li > span {background-color: red;}
+
+/* 후손 선택자 */
+#test-div {
+    border: 2px solid black;
+}
+
+#test-div p {
+    background-color: yellowgreen;
+}
+
+/* 반응 선택자 */
+.div-cls{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: #ddd;
+
+    /* 아래쪽 요소와의 간격 */
+    margin-bottom: 30px;
+
+    /* 요소에 마우스 커서가 올라오면 손가락 모양으로 바꿔줌 */
+    cursor: pointer;
+}
+
+/* 클릭 하고 있을때만 반응하는 : active */
+#active-test:active {
+    background-color: yellow;
+}
+
+#hover-test:hover {
+    background-color: hotpink;
+
+    width: 230px;
+    height: 230px;
+    /* transition-duration: 0.5s; */
+}
+
+/* 변화 시간 지정
+#hover-test 요소가 변화를 일으키면 0.5초동안 변해라!
+*/
+#hover-test {
+    transition-duration: 0.5s;
+}
+
+
+/* 상태 선택자 */
+
+/* 요소에 초점이 맞춰졌을때(:focus) */
+#focus-test:focus {
+    background-color: springgreen;
+}
+
+
+/* 요소가 체크 되었을때 (:checked) */
+input[name="fruits"]:checked {
+    width: 30px;
+    height: 30px;
+
+    background-color: red;
+    /* radio, checkbox는
+        크기를 제외한 스타일이 적용되지 않는다.
+    */
+}
+
+/* 사용가능/불가능(:enabled / :disabled) */
+#test-div2 > input:enabled {
+    background-color: lightgreen;
+}
+
+#test-div2 > input:disabled {
+    background-color: lightcoral;
+}
+
+
+
+/* 동위 선택자 */
+#div1 + div {
+    background-color: olive;
+}
+
+#div3 ~ div {
+    background-color: chartreuse;
+}
+
+/******* checkbox 모양 바꾸기 ********/
+
+/* label 태그 스타일 지정 */
+#check1 + label {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+
+    /* 수평 분할 + 크기조절 */
+    display: inline-block;
+
+    /*마우스 손가락 모양 */
+    cursor: pointer;
+
+    /* 모서리 라운딩 처리 */
+    border-radius: 15%;
+}
+
+/* 체크된 #check1 뒤에 있는 label태그 */
+#check1:checked + label {
+    background-image: url(../../images/check.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#check1 {
+    display: none;
+}
