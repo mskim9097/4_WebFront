@@ -1,0 +1,141 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+
+/* content 영역 */
+.content {
+    width: 150px;
+    height: 150px;
+
+    /*
+    width/height 속성은
+    기본적으로 content 영역의 크기를 지정하는 속성
+    */
+}
+
+/* border 영역 */
+.border {
+    border: 10px solid red;
+}
+
+/* padding 영역 */
+.padding {
+    padding: 30px;
+    /* 내용과 테두리 사이 간격을 상하좌우 30px씩 벌림 */
+}
+
+/* margin 영역 */
+.margin {
+    margin: 50px;
+    /* 타 요소와의 간격을 상하좌우 50px 벌림 */
+}
+
+/* 서로 다른 요소의 margin 이 겹칠 경우
+    더 큰 margin을 가진 요소의 값을 따른다.
+*/
+#m1 {
+    margin: 100px;
+}
+
+/***************************************************/
+
+/* 방향성 */
+
+.padding-test {
+    /*
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px; */
+
+    /* padding 속성 :
+    작성법에 따라서 padding 특정 방향에 크기를 지정할 수 있음
+    */
+
+    /* 값 1개 : 상하좌우 */
+    /* padding: 30px; */
+
+    /* 값 2개 : 상하, 좌우 */
+    /* padding: 50px 100px; */
+
+    /* 값 3개 : 상, 좌우, 하 (위 -> 아래) */
+    /* padding: 10px 50px 100px; */
+
+    /* 값 4개 : 상, 우, 하, 좌 (상 기준 시계방향) */
+    padding : 10px 20px 30px 40px;
+}
+
+/* border (속성이 조금 다름) */
+.border-test {
+    /* border 속성은 상하좌우 방향을 별도 지정할 수 없다. */
+
+    /* border: 1px 2px 3px 4px solid red; */
+    border: 4px solid red;
+
+    border-top: 1px solid black;
+    border-bottom: 5px dashed magenta; /* 절취선 */
+    border-left: 10px dotted blue; /* 점선 */
+    border-right: 7px double orange;
+
+
+    /* 값 1개 : 상하좌우 */
+    /* 값 2개 : 상하, 좌우 */
+    /* 값 3개 : 상, 좌우, 하 (위 -> 아래) */    
+    /* 값 4개 : 상, 우, 하, 좌 (상 기준 시계방향) */
+    border-width: 20px 10px 5px 2px;
+}
+
+/* margin 테스트 */
+.margin-test {
+    margin: 100px;
+    margin-top: 200px;
+}
+
+/* margin-auto 테스트 */
+.margin-auto {
+    margin-top: 100px;
+
+    /* 좌우 요소간의 간격을 자동으로 지정하여 가운데 정렬 */
+    margin: auto;
+    /*
+    갑자기 margin-top 이 무시됐다..
+    왜? margin 속성 자체가 상하좌우 동시 지정하는 속성이라
+    상(top) 부분에도 auto가 지정되어있음.
+    이전 100px 내용을 덮어쓰기함.
+
+    -> 해결방법 : margin-top을 auto 밑에 작성하여 auto 덮어씌움
+    */
+    margin-top: 100px;
+}
+
+#box-sizing {
+    /* 테두리 10px, padding 20px, 나머지 내용
+        전체 요소 크기가 가로/세로 300px 정사각형 만들기
+    */
+
+    padding: 20px;
+    border: 10px solid black;
+/*
+    padding, border의 크기를 감안하여 content 크기를 계산해야함.
+    width: 240px;
+    height: 240px;
+    -> box-sizing으로 해결 가능
+    */
+    width: 300px;
+    height: 300px;
+
+    box-sizing: border-box;
+
+    /*
+        content-box (기본값)
+        - width / height 속성 지정 시 content 영역만 적용
+
+        border-box
+        - width /height 속성 지정 시
+        content + padding + border 의 크기를 합산한 결과가
+        지정한 속성값과 같게 자동으로 비율 계산하여 적용
+    */
+}

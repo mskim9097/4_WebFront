@@ -1,0 +1,20 @@
+div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* content + padding + border 의 합으로 width/height 지정 */    
+}
+
+.item {
+    width: 75px;
+    height: 75px;
+}
+
+.item1{ background-color: red;}
+.item2{ background-color: orangered;}
+.item3{ background-color: orange;}
+.item4{ background-color: yellow;}
+.item5{ background-color: yellowgreen;}
+.item6{ background-color: green;}
+.item7{ background-color: blue;}
+.item8{ background-color: indigo;}
+.item9{ background-color: violet;}

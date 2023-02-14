@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/layout2.css">
+    <title>08_레이아웃 스타일2</title>
+</head>
+<body>
+    <h1>요소의 영역(여백) 관련 속성</h1>
+
+    <pre>
+        HTML 요소는 총 4가지 영역으로 구성되어있다.
+
+        1. content 영역
+            - 요소의 내용이 작성 되어지는 영역
+            (시작태그와 종료태그 사이에 작성되는 내용을 생각하면 됨)
+        
+        2. padding 영역
+            - content 영역과 border 영역 사이
+        
+        3. border 영역
+            - 요소의 테두리가 지정되는 영역
+            - content보다 바깥쪽에서 content를 감싸고 있음
+
+        4. margin 영역
+            - 다른 요소와의 간격을 나타내는 영역
+    </pre>
+
+    <h3>기준</h3>
+    <div class="box">내용입니다.</div>
+
+    <h3>content 영역</h3>
+    <div class="box content">내용입니다.</div>
+
+    <h3>border 영역</h3>
+    <div class="box border">내용입니다.</div>
+
+    <h3>padding 영역</h3>
+    <div class="box content border padding">내용입니다.</div>
+
+    <h3>margin 영역</h3>
+    <div class="box content border padding margin">내용입니다.</div>
+    <div class="box content border padding margin" id="m1">내용입니다.</div>
+
+
+    <hr>
+
+    <h2>padding, border, margin 의 방향성</h2>
+    <pre>
+        padding, border, margin은 방향에 따라 크기를 지정할 수 있다.
+
+        OOO-top
+        OOO-bottom
+        OOO-left
+        OOO-right
+
+    </pre>
+
+    <h3>padding 테스트</h3>
+    <div class="box padding-test">내용입니다.</div>
+    <hr>
+
+    <h3>border 테스트</h3>
+    <div class="box border-test">내용입니다.</div>
+    <hr>
+
+    <h3>margin 테스트</h3>
+    <div class="box margin-test">내용입니다.</div>
+    <hr>
+
+    <h3>margin : auto; 테스트</h3>
+    <div style="width: 500px; height: 300px; border: 2px solid black;">
+        <div class="box margin-auto"></div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <h2>box-sizing 속성</h2>
+
+    <pre>
+        요소의 영역 중 실제로 화면상에 보여지는 부분인
+        content, padding, border는 각각 크기를 지정할 수 있음.
+        -> 이 때, 각각의 크기를 따로 지정하다 보니
+            전체적인 크기를 한눈에 파악하고 설정하기 힘들다.
+    </pre>
+
+    <div class="box" id="box-sizing">내용입니다.</div>
+</body>
+</html>
