@@ -10,44 +10,68 @@
     <form>
         <fieldset>
             <legend>납품자 정보</legend>
-            
-            1. 납품자명 : <input type="text" name="supplyName"> <br><br>
-            2. email : <input type="email" name="supplyEmail"> <br><br>
-            3. 홈페이지 : <input type="url" name="supplySite" value="https://"> <br><br>
-            4. 지역 : <select>
-                <option values="seoul">서울</option>
-                <option values="gg">경기</option>
-                <option values="cs">충남</option>
-                <option values="cn">충북</option>
-                <option values="jn">전북</option>
-                <option values="bs" selected>부산</option>
-                <option values="ic">인천</option>
-            </select> <br><br>
+
+            <ol>
+                <li>
+                    <label> 납품자명 : </label>
+                    <input type="text" name="name">
+                    <br><br>
+                </li>
+                <li>
+                    <label> email : </label>
+                    <input type="email" placeholder="answer@naver.com" name="email">
+                    <br><br>
+                </li>
+                <li>
+                    <label> 홈페이지 : </label>
+                    <input type="url" value="https://" name="homepage">
+                    <br><br>
+                </li>
+                <li>
+                    <label> 지역 : </label>
+                    <select name="region">
+                        <option values="부산" selected>부산</option>
+                        <option values="서울">서울</option>
+                        <option values="경기">경기</option>
+                    </select>
+                </li>
+            </ol>           
         </fieldset>
 
         <fieldset>
             <legend>납품 정보</legend>
-
             <ul>
                 <li>
-                    상품명 : <input type="text" name="productName">
+                    <label>
+                        상품명 : <input type="text" name="productName">
+                    </label>
                 </li>
                 <br>
+
                 <li>
-                    납품수량: <input type="number" min="100" placeholder="최소 100" name="productQuantity">
+                    <label>
+                        납품수량: <input type="number" min="100" placeholder="최소 100" name="productQuantity">
+                    </label>
                 </li>
                 <br>
+
                 <li>
-                    납품등급 : <input type="range" min="0" max="100" name="productQuality">
+                    <label>
+                        납품등급 : <input type="range" min="0" max="100" name="productQuality">
+                    </label>
                 </li>
                 <br>
+
                 <li>
-                    기타사항 : <textarea rows="5" name="otherRequest"></textarea>
+                    <label>
+                        기타사항 : <textarea rows="5" cols="20" name="etc"></textarea>
+                    </label>
                 </li>
+                <br>
             </ul>
         </fieldset>
         <br>
-        <button type="submit">send message</button>
+        <button>send message</button>
 
     </form>
 </body>
