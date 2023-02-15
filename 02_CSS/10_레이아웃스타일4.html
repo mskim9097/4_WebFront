@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout4.css">
+
+    <title>10_레이아웃 스타일4</title>
+</head>
+<body id="body-top">
+    <h1>배치 관련 스타일(position)</h1>
+
+    <pre>
+        position은 요소의 위치를 지정하는 속성
+
+        position : relative; (상대적인)
+        - 지정된 요소 내부에 다른 요소가
+            상대적인 위치를 지정할 수 있도록
+            기준이 되게 만드는 속성.
+        
+        - 내부에 작성되는 요소에 위치 지정 시
+            top, bottom, left, right 속성을 사용할 수 있음.
+
+
+        position : absolute; (절대적인)
+        - 기본 요소의 배치 순서를 무시하고 지정된 절대 위치에 요소를 배치함.
+        
+        position : fixed; (고정된)
+        - 항상 고정된 위치에 요소를 배치함. (화면이 움직이든 말든 항상 같은 위치)        
+    </pre>
+
+
+    <hr>
+
+    <div class="container-1">
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <div class="third">third</div>
+    </div>
+
+
+    <!-- absolute의 특징 중 절대적인 위치에 배치되는 특징은
+        body 태그의 자식인 경우에만 가능하다.
+    -->
+    <div class="third"></div>
+    
+    <hr>
+
+    <h2>요소를 영역 정 가운데 배치하기</h2>
+    <div class="container-2">
+        <div id="center"></div>
+    </div>
+
+    <div class="fixed">
+        <a href="#body-top">위쪽으로 이동</a>
+    </div>
+
+
+</body>
+</html>

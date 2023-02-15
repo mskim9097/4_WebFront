@@ -1,0 +1,80 @@
+div {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.test {
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+}
+
+.float-left {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+
+    /* 요소를 띄워서 왼쪽으로 흐름을 주어 왼쪽 정렬 */
+    float: left;
+}
+
+.float-right {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+
+    float: right;
+}
+
+.clear {
+    background-color: red;
+    color: white;
+
+    /* 현재 요소부터 겹쳐지는 float 상태를 해제
+    * clear의 방향성
+
+    - float는 left/right 나눠져 있는데
+        지정된 float 흐름과 같은 방향을 해제해야
+        겹침 문제가 해결됨.
+
+    */
+
+    clear: both;
+    /* float : left, right를 모두 해제
+    
+    */
+}
+
+/* 좌우 2분할 */
+
+.container {
+    width: 400px;
+    height: 200px;
+}
+
+.div-1 {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+
+
+.bg-1 {background-color: red;}
+.bg-2 {background-color: orange;}
+.bg-3 {background-color: yellow;}
+.bg-4 {background-color: green;}
+.bg-5 {background-color: blue;}
+.bg-6 {background-color: indigo;}
+.bg-7 {background-color: violet;}
+
+
+.row {
+    height: 50%;
+}
+
+.container-3 {
+    width: 400px;
+    height: 400px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_글자 관련 스타일</title>
+
+    <link rel="stylesheet" href="css/text-style.css">
+</head>
+<body>
+    <h1>글자 관련 스타일</h1>
+
+    <h3>color: 글자 색을 지정하는 속성</h3>
+    <pre>
+        선택자 { color : 색상명(영문) 
+                | 16진수 숫자 RGB(#fff, #ffffff)
+                | rgb(255, 255, 255) | rgba(255, 255, 255, 1)
+                | hsl(360, 100, 100) | hsla(360, 100, 100, 1)
+        }
+
+        * rgba에서 a는 투명도 (0 : 투명 , 1 : 불투명)
+        * hsl(색조, 채도, 밝기)
+        * 6개의 색상 지정 방법은 색과 관련된 모든 css 속성에서 사용 가능
+    </pre>
+
+    <ul id="color-ul">
+        <li>색상명으로 지정</li>
+        <li>16진수 rgb로 지정</li>
+        <li>rgb로 지정</li>
+        <li>rgba로 지정</li>
+        <li>hsl로 지정</li>
+        <li>hsla로 지정</li>
+    </ul>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트에 줄을 긋는 속성</h3>
+    <ul id="deco-ul">
+        <li>아랫줄 긋기</li>
+        <li>중간줄 긋기</li>
+        <li>윗줄 긋기</li>
+        <li>
+            <a href="#">줄 없애기</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>test-align : 글자(+inline)를 정렬하는 속성(왼쪽, 오른쪽, 가운데, 양쪽)</h3>
+
+    <div id="align-test">
+        <p>안녕하세요 ? <span>반갑습니다!</span> 오늘 뭐먹죠?</p>
+        <p>안녕하세요 ? <span>반갑습니다!</span> 오늘 뭐먹죠?</p>
+        <p>안녕하세요 ? <span>반갑습니다!</span> 오늘 뭐먹죠?</p>
+
+        <p>Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! 
+            Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! 
+            Hello World! Hello World! Hello World! Hello World! 
+        </p>
+
+        <div id="div1">
+            <div>inline-block</div>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <h3>line-height : 줄 간격(장평)을 지정하는 속성</h3>
+    <pre>
+        줄 사이 간격을 지정한 만큼 벌리는게 아니라
+        한 줄의 높이를 지정하는 속성이다.
+
+        * 줄의 높이가 글자의 크기보다 큰 경우
+        글자는 해당 줄 세로 가운데에 배치된다.
+    </pre>
+
+    <div id="line-test">
+        <p>동해물과 백두산이 마르고 닳도록<br>
+            하느님이 보우하사 우리 나라 만세<br>
+            무궁화 삼천리 화려 강산<br>
+            대한 사람 대한으로 길이 보전하세
+        </p>
+        <p>동해물과 백두산이 마르고 닳도록<br>
+            하느님이 보우하사 우리 나라 만세<br>
+            무궁화 삼천리 화려 강산<br>
+            대한 사람 대한으로 길이 보전하세
+        </p>
+    </div>
+
+    <hr>
+
+    <h3>letter-spacing : 글자 사이 간격(자간) 지정 속성</h3>
+
+    <p id="letter-test">Hello world!!!</p>
+
+    <button id="letter-test2">클릭</button>
+
+    <hr>
+
+    <h3>text-shadow : 텍스트에 그림자 효과를 추가하는 속성</h3>
+
+    <div id="shadow-test">
+        <p>HTML5</p>
+        <p>HTML5</p>
+        <p>HTML5</p>
+        <p>HTML5</p>
+    </div>
+
+</body>
+</html>
