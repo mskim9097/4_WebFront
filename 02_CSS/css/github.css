@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* body 태그가 가지고 있는 기본 margin 제거 */
+}
+
+.blackNav {
+    background-color: #24292f;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.blackNav div:first-child {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+}
+
+.blackNavLeft {
+    border: 2px solid red;
+    flex-basis: 35%;
+    display: flex;
+}
+
+.blackNavLeft > button {
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: white;
+}
+
+.blackNavLeft > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.blackNavLeft li {
+    font-size: 16px;
+    color: white;
+    padding-right: 20px;
+}
+
+
+
+.blackNavCenter {
+    border: 2px solid orange;
+    flex-basis: 30%;
+}
+
+.blackNavRight {
+    border: 2px solid blue;
+    flex-basis: 35%;
+}
+

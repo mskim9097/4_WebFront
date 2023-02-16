@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* body 태그가 가지고 있는 기본 margin 제거*/
+    
+}
+
+.container {
+    width: 800px;
+    height: 380px;
+}
+
+
+div {
+    border: 3px solid white;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.header{
+    height: 80px;
+}
+
+.nav {
+    height: 40px;
+}
+
+.content {
+    height: 200px;
+    display: flex;
+}
+
+.content div:nth-last-of-type(1){
+    flex-basis: 20%;
+}
+
+.content div:nth-last-of-type(2){
+    flex-basis: 60%;
+}
+
+.content div:nth-last-of-type(3){
+    flex-basis: 20%;
+}
+
+.footer {
+    height: 60px;
+}

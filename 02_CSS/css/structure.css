@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* body 태그가 가지고 있는 기본 margin 제거*/
+}
+
+/* 처음에 헷갈리니깐 라인 그어주기
+div {
+    border: 1px solid black;
+}*/
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    height: 200px;
+    display: flex;
+}
+
+/* 로고 div */
+.header > div:nth-of-type(1) {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 검색 div */
+.header > div:nth-of-type(2) {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 공백 div */
+.header > div:nth-of-type(3) {
+    flex-basis: 15%;
+}
+
+/* 로고 */
+#home-logo {
+    width: 120px;
+    height: auto;
+}
+
+.search-area {
+    width: 500px;
+}
+
+.search-area fieldset {
+    padding: 2px;
+    margin: 0;
+    border: 2px solid #455ba8;
+    border-radius: 5px;
+
+    display: flex;
+}
+
+#query {
+    padding : 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* border : 0; */
+    border : none;
+
+    /* outline : input 태그에 포커스가 맞춰 졌을 때
+                이를 표현하기 위한 바깥선
+                (테두리 보다 바깥에 존재)*/
+    outline : 0; /* none도 가능 */
+
+    width: 92%;
+}
+
+#search-btn {
+    width: 8%;
+    
+    cursor: pointer;
+
+    font-size: 1.2em;
+    color: #455ba8;
+    background-color: transparent;
+    /* 투명 */
+    border: 0;
+}
+
+/* nav */
+.nav {
+    height: 50px;
+
+    border-bottom: 2px solid black;
+    background-color: white;
+    
+    position: sticky;
+    /* sticky: 스크롤이 임계점(최상단)에 도달했을때
+    스티커처럼 붙임 
+    - static (기본 position 상태)
+    임계점 도달 시 fixed(화면 특정 위치에 고정)
+
+    * top, bottom, left, right 속성이 필수로 작성
+    -> 임계점 도달 시 어느 위치에 부착할지 지정
+    */
+    top : 0;
+}
+
+/* nav 스타일 */
+.nav > ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.nav li {
+    flex: 0 1 150px;
+    /* 팽창, 수축, 기본값 */
+}
+
+.nav a {
+    display: block;
+    height: 100%;
+
+    text-align: center;
+    
+    line-height: 48px;
+
+    /* 밑줄 없애기 */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+
+    /* 모서리 깎기*/
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+.nav a:hover {
+    background-color: #455ba8;
+    color: white;
+}
+
+
+/* content */
+.content {
+    height: 1000px;
+    display: flex;
+}
+
+.content-1 { flex-basis: 70%;}
+.content-2 { flex-basis: 30%;}
+
+/* login 스타일 */
+form[name="login-form"] {
+    height: 140px;
+    padding: 10px;
+
+    display: flex;
+    /* 중심축을 세로로 변경 */
+    flex-direction: column;
+
+    /* 중심축에 대한 정렬 (세로 가운데 정렬)*/
+    justify-content: center;
+
+}
+
+#id-pw-area {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+
+    flex-basis: 60%;
+}
+
+/* id/pw input 담긴 영역 */
+#id-pw-area > div:first-child{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+}
+/* 로그인 버튼*/
+#id-pw-area > div:last-child{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 아이디/비밀번호 input 창 기본 스타일 지정 */
+#id-pw-area input {
+    border: 0;
+    border-right: 1px solid #ddd;
+    flex-basis: 50%;
+    outline: 0;
+    margin: 0;
+    padding: 5px;
+}
+
+#id-pw-area input:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+#id-pw-area input:focus {
+    border: 2px solid #455ba8;
+}
+
+/* 로그인 버튼 */
+#id-pw-area button {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#id-pw-area button:hover {
+    background-color: #455ba8;
+    color: white;
+}
+
+
+/* 회원가입, ID/PW 찾기 영역 */
+#signup-find-area {
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+#signup-find-area > a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#signup-find-area > span {
+    padding: 0 10px;
+        /*상하, 좌우*/
+}
+
+/* footer 스타일 */
+
+.footer {
+    height: 200px;
+    background-color: #a3add342;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > p {
+    font-weight: bold;
+}
+
+.footer > div > * {
+    font-size: 14px;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer span {
+    padding: 0 10px;
+}
