@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid black;
+}
+
+/********************************************************/
+
+.container {
+    display: flex;
+    height: 1000px;
+}
+
+/* 왼쪽 */
+.container div:first-child {
+    flex-basis: 20%;
+}
+.container div:last-child {
+    flex-basis: 80%;
+}
+
+/* == 오른쪽 */
+.right {
+    /* 새로운 flex 부모가 되어야함 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더, 네비 */
+.right > div:nth-child(1),
+.right > div:nth-child(2) {
+    flex-basis: 10%;
+}
+
+/* 콘텐츠(주황) */
+.right > div:nth-child(3) {
+    background-color: orange;
+    flex-basis: 80%;
+}
+
+/* == 콘텐츠(주황) */
+.orange {
+    /* 새로운 flex 부모 되어야함 */
+    display: flex;
+    padding: 20px;
+}
+
+/* 빨간 / 파초박스 */
+.orange > div:nth-child(1),
+.orange > div:nth-child(2) {
+    flex-basis: 50%;
+}
+
+/* 빨간색 */
+.orange > div:nth-child(1) {
+    background-color: red;
+}
+
+/* 파초박스 */
+.orange > div:nth-child(2) {
+    /* 새로운 flex 부모가 되어야함 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* == 파초박스 */
+.blueGreen > div:nth-child(1) {
+    /* 파란박스 */
+    background-color: blue;
+    flex-basis: 40%;
+    margin: 0px 0px 10px 20px;
+}
+
+.blueGreen > div:nth-child(2) {
+    /* 초록박스 */
+    background-color: green;
+    flex-basis: 60%;
+    margin: 10px 0px 0px 20px;
+}
+
+.red {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.red div:nth-child(1),
+.red div:nth-child(2),
+.red div:nth-child(3),
+.red div:nth-child(4) {
+    flex-basis: 50%;
+    background-color: yellow;
+    scale: 0.8;
+}
