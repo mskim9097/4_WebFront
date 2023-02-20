@@ -92,7 +92,7 @@
     /* justify-content: flex-start; */
 
     /* main axis 끝 지점을 기준으로 정렬함 */
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
 
     /* main axis 가운데 정렬 */
     /* justify-content: center; */
@@ -107,7 +107,7 @@
     /* justify-content: space-evenly; */
 
     /* space-evenly에서 양끝을 flex-container에 붙게함 */
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 
     /***************/
@@ -125,7 +125,7 @@
     flex-container와 같은 크기를 가지도록함
     */
     /* 조건 : item에 cross axis 방향의 크기 지정 속성이 없어야함 */
-    /* align-items: stretch; */
+    align-items: stretch;
 
     /* 시작부분을 기준 */
     /* align-items: flex-start; */

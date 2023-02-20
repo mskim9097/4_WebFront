@@ -1,153 +1,74 @@
-<!DOCTYPE html> <!-- (Document Type(문서 형식)) : 현재 문서 형식 지정 -->
-<html lang="en"> <!-- html태그: html 문서의 내용을 정의하는 태그 (이 안에 HTML 코드 작성)-->
-<head> <!-- head 태그 : html 문서를 정의하는 태그(문서의 제목, css, js, 메타데이터) -->
+*****<!DOCTYPE html> <!-- (Document Type(문서 형식)) : 현재 문서 형식 지정 -->*****
+*****<html lang="en"> <!-- html태그: html 문서의 내용을 정의하는 태그 (이 안에 HTML 코드 작성)-->*****
+*****<head> <!-- head 태그 : html 문서를 정의하는 태그(문서의 제목, css, js, 메타데이터) -->*****
     <meta charset="UTF-8"> <!-- 현재 문서의 문자 형식이 UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 만들기 위한 설정(기계의 넓이를 인식) -->
     <title>시험준비</title>
-    <link rel="stylesheet" href="../시험준비/시험준비.css">
+    *****<link rel="stylesheet" href="/시험준비/시험준비.css"> <!-- 스타일 외부문서 가지고오는 방법 -->*****
     <style>
-        .test { /* HTML 문서의 스타일을 지정하는 태그(css내에서 하는걸 권장) */
-            background-color: aquamarine;
-        }
-
-        .test th, td {
-            border: 1px solid red;
-        }
+ /* HTML 문서의 스타일을 지정하는 태그(css내에서 하는걸 권장) */
     </style>
 </head>
-<body> <!-- 화면에 보여질 html 문서의 내용을 정의하는 태그 -->
-    h1~h6 : 제목을 입력할때 사용하는 태그 (1~6까지 폰트크기 지정), 종료 태그 이후 줄바꿈
-    기본<h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6>
-    <hr>
-    hr : 가로줄 긋기 태그
-    <br>
-    br : 줄바꿈 <br>
-    & nbsp ; : 띄어쓰기 한칸
-    <p>
-        p태그 : 글을 작성하는 용도의 태그
-        종료 시 줄바꿈
-    </p>
+*****<body> <!-- 화면에 보여질 html 문서의 내용을 정의하는 태그 -->*****
     <pre>
+        h1~h6 : 제목을 입력할때 사용하는 태그 (1~6까지 폰트크기 지정), 종료 태그 이후 줄바꿈
+        *****hr : 가로줄 긋기 태그*****   
+        *****br : 줄바꿈*****
+        & nbsp ; : 띄어쓰기 한칸
+
+        p태그 : 글을 작성하는 용도의 태그 / 종료 시 줄바꿈
         pre태그 : 글을 작성하는 용도의 태그
         시작, 종료 태그 사이에 작성된 문자열의 형식을 그대로 출력함
+        strong 태그 / b : 글자를 강조/굵게하는 태그(웹접근성)
+        em 태그 / i : 글자를 강조/기울이는 태그(웹접근성)
+        mark 태그 : 형광펜 효과를 나타내는 태그
+        u 태그 : 밑줄
+        del 태그 / s : 취소선
+        small : 글자를 작게
+        sup : 윗첨자 / sub : 아랫첨자
+        title="abbreviation 약어">abbr 태그 : 마우스 오버 시 툴팁 출력 태그
     </pre>
-
-    <strong>strong 태그 : 글자를 강조/굵게하는 태그(웹접근성)</strong><br>
-    <b>b 태그 : 글자를 굵게 표시하는 태그</b><br><br>
-    <em>em 태그 : 글자를 강조/기울이는 태그(웹접근성)</em><br>
-    <i>i 태그 : 글자를 기울이는 태그</i><br><br>
-    <mark>mark 태그 : 형광펜 효과를 나타내는 태그</mark><br>
-    <u>u 태그 : 밑줄</u>
-    <s>s 태그 : 취소선</s>
-    <del>del 태그 : 취소선</del><br>
-    <small>small 태그 : 글자를 작게</small><br>
-    sup태그(윗첨자)/sub태그(아랫첨자) : x<sup>2</sup>, log<sub>10</sub><br>
-    <abbr title="abbreviation 약어">abbr 태그 : 마우스 오버 시 툴팁 출력 태그</abbr>
-    <hr>
-    <ul>
-        <li>ul 태그 : 순서없는 목록을 작성하는 태그</li>
-        <li>li 태그 : 목록에 들어가는 내용을 작성하는 태그</li>
-    </ul>
-    <ol start="5" reversed type="I">
-        <li>ol 태그 : 순서 있는 목록을 작성하는 태그</li>
-        <li>type = "a" : 영어 소문자 순서</li>
-        <li>type = "A" : 영어 대문자 순서</li>
-        <li>type = "i" : 로마 소문자 순서</li>
-        <li>type = "I" : 로마 대문자 순서</li>
-        <li>start = "5" : 5부터 시작</li>
-        <li>reversed : 순서 반대로</li>
-    </ol>
-
-    <hr>
-
+    
+    *****<pre>*****
+        ul 태그 : 순서없는 목록을 작성하는 태그
+        ol 태그 : 순서있는 목록을 작성하는 태그
+        li 태그 : 목록에 들어가는 내용을 작성하는 태그
+        ol start="5" type="I" reversed 로마대문자/ i=로마소문자 / a=영어소문자 / A=영어 대문자
+    </pre>
+   
     <pre>
-        table 태그 : 테이블을 나타내는 행과 열이 작성될 수 있는 영역을 지정함.
-        웹 문서에서 자료 정리를 위해 주로 사용하는 태그
-        행과 열로 이루어짐, 행과 열이 교차하는 지점을 셀이라고함
-    </pre>
-    <table border="1" class="test">
-        <caption>caption 태그 : 테이블의 제목이나 설명 내용을 추가하는 태그</caption>
-        <thead>
-            <tr>
-                <th>thead : 테이블의 상단 부분 영역(컬럼명)</th>
-                <th>tr태그: 한행을 나타내는 태그</th>
-                <th>th태그 : 컬럼명을 표시하는 용도의 태그(td+굵은글씨+가운데정렬)</th>
-                <th rowspan="2">rowspan : 행 (상하) 병합</th>
-            </tr>
-            <tr>
-                <th>rowspan</th>
-                <th>확인용</th>
-                <th>같은영역에서만가능(thead)</th>
-            </tr>
-        </thead>
 
-        <tbody>
-            <tr>
-                <td>tbody : 테이블의 중단 부분 영역(실제 값, 내용)</td>
-                <td>td태그 : 한 행의 한 컬럼(cell)을 나타내는 태그</td>
-                <td></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>tfoot: 테이블의 하단 부분 영역(합계)</td>
-                <td colspan="2">colspan : 열(좌우) 병합</td>
-            </tr>            
-        </tfoot>
-    </table>
-    <hr>
-    <pre>
-        
-        
     </pre>
 
-    <div style= "width: 200px; height: 200px; background-color: yellowgreen;">
-        block 형식 : 수직분할(행)(p,pre,h1~6,hr,div)<br>
-        개행O<br>
-        사각형 박스 형태로 영역을 지정<br>
-        크기지정O<br>
-    </div>
-    개행확인<br>
+    *****<pre>*****
+        table 태그 : 행과 열이 작성될 수 있는 영역을 지정하는 태그.
+        행과 열이 교차하는 지점을 셀이라고함
+        caption 태그 : 테이블의 제목이나 설명 내용을 추가하는 태그
+        table, tr : 한행, th : td+굵은글씨+가운데정렬, td: 한행의 한컬럼을 나타내는 태그
+        테이블 열병합/행병합 (colspan, rowspan)(thead,tbody,tfoot 같은 영역내에 있어야함)
+    </pre>
 
-    <span style="width: 200px; height: 200px; background-color: springgreen;">
-        inline 형식 : 수평분할(열)(strong,b,em,i,mark,span)<br>
-        개행X<br>
-        내부에 작성된 내용 단위로 영역을 지정<br>
-        크기지정X<br>
-    </span>
-    개행확인<br><br>
-    <p>iframe 태그 : 웹문서내부에 다른 웹문서를 추가하는 태그(inline형식 이지만 크기지정 가능)</p>
-    <iframe
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/vrhIxBWSJ04?autoplay=0" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen></iframe>개행확인
-    <hr>
+    *****<pre>*****
+        block 형식 : 수직분할(div)행, 개행O, 사각형 박스형태로 영역을지정, 크기지정O
+        inline 형식 : 수평분할(span)열, 개행X, 내부에 작성된 내용 단위로 영역을 지정, 크기지정X
+        iframe 태그 : 웹문서 내부에 다른 웹문서를 추가하는 태그(inline형식이지만 크기지정 가능)
+    </pre>
 
     <pre>
         img 태그
         웹문서에 사진,그림같은 이미지를 삽입하는 용도의 태그
         1) src: 이미지의 경로를 지정(파일경로,웹주소)
         2) width / height : 이미지의 크기를 지정
-        3) alt : 이미지를 설명하는 속성
-        -> 이미지가 출력되지 않는 경우 화면에 직접 표시
-        (웹접근성)
+        *****3) alt : 이미지를 설명하는 속성 -> 이미지가 출력되지 않는 경우 화면에 직접 표시(웹접근성)*****
         상대경로 : 현재 위치를 기준으로 경로 지정
         .. : 상위폴더
         / : 아래,안쪽,안에
         고정 크기 단위(px) : 화면의 크기 상관 없이 지정된 값의 크기를 갖는 단위
         가변 크기 단위(%) : 화면이나 영역 기준 사이트 크기에 따라 크기 변경되는 단위
     </pre>
-    <img src="./image/img/고양이.jpg" alt="alt속성확인">
-    <img src="../image/img/고양이.jpg" width="100px" height="100px">
-    <img src="http://www.chemicalnews.co.kr/news/photo/202106/3636_10174_4958.jpg" width="15%" height="15%">
-    <hr>
     
-    <pre>
+    *****<pre>*****
         하이퍼링크 관련 태그(a(anchor)태그)
         현재 HTML문서와 다른HTML문서를 연결해서
         페이지 이동을 할 수 있게 하는 기능
@@ -156,120 +77,63 @@
         target 속성 : 연결된 문서를 어디에서 열 것인지 지정하는 속성
         기본값 : 같은탭 / _blank : 새탭
     </pre>
-    <a href="../01_HTML/01_글자관련태그.html">다른html이동</a>
-    <a href="../01_HTML/01_글자관련태그.html" target="_blank">_blank</a>
-    <a href="https://www.naver.com" target="_blank">링크이동</a>
-    <a href="https://www.naver.com" target="_blank">
-        <img src="../image/img/고양이.jpg" width="10%" height="10%">
-    </a><br>
 
-    <a id="list" href="#cat1">한페이지 내 이동(점프)</a><br>
-    <img src="../image/img/고양이.jpg" id="cat1" width="10%" height="10%"><br>
-    <a href="#list">목록으로 이동</a>
-    <hr>
-
-    <pre>input 태그:
-        웹문서에서 사용자가 입력할 수 있는 양식을 제공하는 태그(inline)
+    <pre>
+        input 태그: 웹문서에서 사용자가 입력할 수 있는 양식을 제공하는 태그(inline)
         value : 모든 input 태그의 type에서 사용가능(초기값지정)
-        text 관련 : 한줄짜리 문자열을 입력할 수 있는 입력상자(기본값)
+        text 관련 : 한줄짜리 문자열을 입력할 수 있는 입력상자(기본값)(size, maxlength, placeholder)
         password: 입력되는 텍스트를 가려줌
         url : 주소입력시 사용
         tel : 전화 입력시 사용
         email : 이메일 입력시 사용
+        *****required : input태그에 필수입력사항 속성부여*****
     </pre>
-    <input type="text" size="70" maxlength="20" 
-    placeholder="size:상자크기, maxlength:텍스트의최대길이, placeholder: 작성될 내용 설명"><br>
-    <input type="password"><br>
-    <input type="url" value="http://"><br>
 
     <pre>
         숫자 관련(min:최소값 max:최대값 step:증가/감소 단계지정)
-        number : 숫자만 입력
-        range : 슬라이드바를 이용해서 숫자지정(단독사용X JS와 함께사용)
-    </pre>
-    <input type="number" min="0" max="100" step="10" value="50">
-    <input type="range" min="0" max="50" step="10">
+        number : 숫자만 입력 (min, max, step, value)
+        range : 슬라이드바를 이용해서 숫자지정(단독사용X JS와 함께사용) (min, max, step)
 
-    <pre>날짜/시간 관련</pre>
-    <ul>
-        <li><input type="date"></li>
-        <li><input type="month"></li>
-        <li><input type="week"></li>
-        <li><input type="time"></li>
-        <li><input type="datetime-local"></li>
-    </ul>
+        날짜/시간 관련
+        date, month, week, time, datetime-local
+    </pre>
+
     <pre>
-        radio와 checkbox
+        radio(중복X)와 checkbox(중복O)
         여러 관련 값을 묶어서 선택하는 경우에 사용
         묶음으로 다룰려는 input태그들을 반드시 같은 name속성값을 가져야함
         id: 식별자(하나의 HTML문서에서 중복금지)
         name: input태그들중 관련된 것들을 묶어서 부를때 사용
         서버쪽에 제출되는 input 태그 값의 이름을 지정(form태그와 같이 사용)
         checked : checkbox/radio 체크해두는 속성
+        label for="체크id" : label눌러도 체크가능
+
+        기타 color, file, hidden
     </pre>
-    <label for="radio1">radio1</label> <input type="radio" name="radio" id="radio1" checked>
-    <label for="radio2">radio2</label> <input type="radio" name="radio" id="radio2">
-    <label for="checkbox1">checkbox1</label> <input type="checkbox" name="checkbox" id="checkbox1">
-    <label for="checkbox2">checkbox2</label> <input type="checkbox" name="checkbox" id="checkbox2"><br>
-    <input type="color">
-    <input type="file">
-    <input type="hidden">
 
     <pre>
         form 태그:
         -div와 같은영역(block형식)
         내부에 작성된 input 태그의 값을 서버로 전달하는 역할
         1) action : 내부에 작성된 값을 전달할 서버 또는 페이지 주소를 작성
-        2) method : 서버로 데이터 전달하는 방식을 지정
+        *****2) method : 서버로 데이터 전달하는 방식을 지정*****
         3) name : form태그의 이름을 지정하여 각각의 form 태그 구분
         4) target : action에 지정된 주소를 현재탭/새탭중 어디서 열지 지정
+
+        button(submit기본값)(reset: 모든 input값 초기화 button:그냥버튼)
     </pre>
-    <form action="../01_HTML/09_입력관련태그.html" target="_blank">
 
-        <label for="aa-team">A팀</label> 
-        <input type="radio" name="team" id="aa-team" value="A">
-            
-        <label for="bb-team">B팀</label> 
-        <input type="radio" name="team" id="bb-team" value="B">
+    <script>// 자바스크립트 작성 영역</script>
 
-        <label for="baseball">야구</label> 
-        <input type="checkbox" name="hobby" id="baseball" value="야구">
+    <pre>
+        fieldset : 테두리를 만들어 그룹을 구분하는 영역
+        legend : fieldset 테두리에 이름을 부여
+        textarea : 여러줄을 입력하기위한 입력상자(rows cols style)
 
-        <label for="soccer">축구</label>
-        <input type="checkbox" name="hobby" id="soccer" value="축구">
-
-        <button>button태그(submit기본값)</button>
-        <button type="reset">reset 태그(모든input값 초기화)</button>
-        <button type="button" id="btn">그냥버튼</button>
-    </form>
-
-    <script>
-        // 자바스크립트 작성 영역
-
-        document.getElementById("btn").addEventListener("click", function() {
-            alert("버튼 클릭됨");
-        })
-    </script>
-
-    <p>fieldset : 테두리를 만들어 그룹을 구분하는 영역</p>
-    <form>
-        <fieldset>
-            <legend>legend : fieldset 테두리에 이름을 부여</legend>
-            <textarea rowㄴ="5" cols="70" style="resize: none;"
-            placeholder="textarea태그 : 여러줄을 입력하기 위한 입력상자">
-            row,cols로 크기지정가능
-            </textarea><br>
-            option에 value가 있으면 :value 속성안에 작성된 값<br>
-            option에 value가 없으면 : 옵션/옵션 사이에 작성된 값이 제출<br>
-            selected : select의 기본 값을 설정하는 속성
-            <select>
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-            </select>
-        </fieldset>
-    </form>
-    <hr>
-    <hr>
+        select,option(value가 있으면 value에 작성된 값 없으면 옵션옵션사이에 작성된 값이 제출
+        selected : select의 기본 값을 설정하는 속성)
+    </pre>
+   
     <pre>
         CSS(Cascading Style Sheets)
         마크업 언어(HTML)가 실제로 화면에
@@ -411,6 +275,115 @@
         none : 화면에 요소가 표시되지는 않으나 존재는 하고 있는 상태
         flex : 요소의 정렬되는 방향, 요소간의 간격을 유연하게 처리하는 형식
 
+        HTML 요소
+        1. content : 요소의 내용이 작성되는 영역
+        2. padding : content와 border 사이
+        (상하좌우, 상하/좌우, 상/좌우/하, 상/우/하/좌)
+        3. border : 요소의 테두리
+        border-width(상하좌우, 상하/좌우, 상/좌우/하, 상/우/하/좌)
+        4. margin : 다른 요소와의 간격(겹치면 더큰곳)
+        margin-auto : 좌우 요소간 간격을 자동으로 지정하여 가운데 정렬
+
+        OOO-top / bottom / left / right
+
+        box-sizing
+        요소의 영역 중 실제 화면에 보여지는 content, padding, border
+        는 각각 크기를 지정할수 있음(따로지정하다보니 전체적인 크기 파악,설정 힘듦)
+
+        box-sizing: content-box(기본값): content영역만 크기 적용
+        box-sizing: border-box : margin제외한 영역 크기 합산 적용
+
+        float : 요소를 띄어서 좌/우로 정렬
+        clear : float를 해제하는 속성(겹침문제 해결)
+
+        position : 요소의 위치를 지정하는 속성
+        relative;(상대적) : 지정된 요소 내부의 다른요소가 상대적인 위치를 지정할 수 있도록 기준이 되게 만듬
+        absolute;(절대적) : 기본 요소의 배치 순서 무시 지정된 절대 위치에 요소를 배치
+        fixed;(고정된) : 항상 고정된 위치에 요소를 배치
+    </pre>
+
+    <pre>
+        글자 관련 스타일
+        color: 글자 색 지정
+        선택자 { color : 색상명/16진수/rgb/rgba/hsl/hsla}
+        text-decoration : 텍스트에 줄을 긋는 속성
+        underline/line-through/overline/none
+        text-align : 글자를 정렬하는 속성
+        left/right/center/justify(space-between)
+        line-height : 줄 간격을 지정하는 속성
+        line-spacing : 글자 사이 간격 지정
+        text-shadow : 텍스트에 그림자 효과를 추가
+    </pre>
+
+    <pre>
+        폰트 관련 스타일
+        font-size : 글꼴의 크기를 지정
+        font-weight : 글꼴의 굵기를 지정
+        font-family : 글꼴을 지정
+    </pre>
+
+    <pre>
+        
+        2차원 변형
+        transform : 이동 translateX(px),Y(px),(px,px)
+        -ms-transform : 확대/축소 scaleX(2),Y(2),(2,2)    
+        -webkit-transform : 회전 rotate(180deg)
+
+        3차원 변형
+        transform : perspective(px) translate3d(px,px,px)
+                                    rotateX,Y,Z,3d
+
+        transition-delay : 딜레이시간
+        transition-duration : 변형되는 시간
+    </pre>
+
+    <pre>
+        Flexbox
+        요소의 정렬 방향,순서,간격을 알아서 유연하게 처리해주는 방식
+        1.구성(flex-container: 정렬할 요소를 감싸는 요소, item:정렬을 적용할 요소)
+        2. 축(중심,교차,반대)
+
+        container 전용속성
+        flex-direction:메인축의 방향과 시작위치 지정
+        row, column-reverse
+
+        flex-wrap:내부 item들이 강제로 한줄에 배치되게 할것인지
+                container가 줄어들면 여러줄로 배치할 것인지 지정
+        nowrap:한줄 wrap:여러줄 wrap-reverse:여러줄뒤에서부터
+
+        flex-flow : container의 메인축의 방향, 순서, wrap여부를 한번에 설정
+        flex-flow : row-reverse wrap;
+
+        justify-content: 메인축 방향으로 item의 정렬 방법 조정
+        flex-start, flex-end, center, space-around, space-evenly, space-between
+
+        align-items : 교차축 방향으로 item의 정렬 방법 조정
+        flex-start, flex-end, center, baseline(content가 한줄에배치)
+
+        align-content : 교차축 방향으로 item이 포장된(wrap)라인 정렬
+        flex-start, flex-end, center, space-around, space-evenly, space-between
+
+        item 전용속성
+        order: item의 순서를 지정하는 속성
+        flex-grow: 지정된 비율에 맞게 팽창함
+        flex-shrink : 수축하는 정도를 지정
+        flex-basis : 메인축 방향으로 크기 지정
+        align-self : 교차축 방향으로 각각 정렬 지정
+    </pre>
+
+    <pre>
+        position: sticky;
+        border-radius;
+        cursor: pointer;
+        
+        시맨틱태그(의미있는태그 : 태그의 목적파악 용이,웹접근성향상)
+        header 제목 머리말
+        footer 하단 꼬리말 정보작성
+        nav 나침반역할(다른페이지,사이트 이동)
+        main 주된 콘텐츠 작성
+        section 구역 구분
+        article 본문과 독립된 컨텐츠 작성
+        aside 사이드바, 광고
     </pre>
 
 </body>
