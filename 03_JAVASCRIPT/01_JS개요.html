@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_JS 개요</title>
+
+    <!-- external 방식 연결 -->
+    <script src="js/01_개요.js"></script>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>JS 개요</h1>
+
+    <h3>스크립트 언어(script)</h3>
+
+    <pre>
+        기본 프로그램의 동작을 사용자의 요구에 맞게 수행되도록 해주는 용도의 언어.
+
+        별도로 소스코드를 컴파일 하지 않고
+        인터프리터(interpreter)를 이용하여 소스코드를 한 줄씩 읽어 바로 실행.
+        -> 컴파일에 소요되는 시간이 없음.
+        대신 프로그램 실행 시간이 느림.
+
+        짧은 소스코드 파일로 상호작용 하도록 고안됨.
+    </pre>
+
+    <h3>자바스크립트(Javascript /JS)란?</h3>
+    <pre>
+        웹 브라우저에서 많이 사용하는 인터프리터 방식의 객체 지향 프로그래밍 언어이다.
+
+        ECMA Script 표준을 따르는 대표적인 웹 기술이다.
+    </pre>
+
+    <hr>
+
+    <h2>자바스크립트 작성 방법</h2>
+
+    <ul>
+        <li>브라우저 콘솔에 직접 작성</li>
+        <li>html 내부에 script 태그를 이용해서 작성(internal)</li>
+        <li>html 외부에 (.js)파일을 이용해서 작성(external)</li>
+        <li>태그에 직접 JS코드를 작성(inline)</li>
+    </ul>
+
+    <!-- 버튼이 클릭되었을 때 btnClick1() 함수를 호출 -->
+    <button type="button" onclick="btnClick1()">internal 방식</button>
+
+    <!-- 버튼이 클릭되었을 때 btnClick2() 함수를 호출 -->
+    <button type="button" onclick="btnClick2()">external 방식</button>
+
+
+    <!-- JS는 "" / '' 둘다 문자열 리터럴 표기법으로 인식됨 -->
+    <button type="button" onclick="alert('inline 버튼 클릭됨')">inline 방식</button>
+
+
+    <script>
+        function btnClick1() {
+            alert("internal 버튼이 클릭되었습니다!");
+        }
+    </script>
+
+
+
+    <hr>
+
+    <h3>JS 테스트</h3>
+
+    <div id="box"></div>
+
+    <button type="button" onclick="changeColor1()">red</button>
+    <button type="button" onclick="changeColor2()">yellow</button>
+
+</body>
+</html>
