@@ -1,0 +1,19 @@
+
+#box {
+    border: 1px solid black;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+}
+
+.love {
+    font-family: '궁서';
+    background-color: red;
+    color: white;
+}
+
+.stop {
+    font-family: '궁서';
+    background-color: black;
+    color: white
+}
