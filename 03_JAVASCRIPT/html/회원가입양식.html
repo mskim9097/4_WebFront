@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식</title>
+
+    <link rel="stylesheet" href="../css/회원가입양식.css">
+</head>
+<body>
+    
+    <form>
+        <table>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" id="inputId" placeholder="아이디 입력"></td>
+                <td id="resultId" class="error"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" id="inputPw1" placeholder="비밀번호 입력"></td>
+                <td id="resultPw1" class="error"></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" id="inputPw2" placeholder="비밀번호 확인"></td>
+                <td id="resultPw2" class="error"></td>
+            </tr>
+            <tr>
+                <th>이름(2글자 이상)</th>
+                <td><input type="text" id="inputName" placeholder="홍길동"></td>
+                <td id="resultName" class="error"></td>
+            </tr>
+            <tr>
+                <th>휴대폰번호(- 제외, 010만)</th>
+                <td><input type="tel" id="inputPhone" placeholder="01011112222"></td>
+                <td id="resultPhone" class="error"></td>
+            </tr>
+            <tr>
+                <th>주민등록번호(- 입력)</th>
+                <td><input type="text" id="inputIdNum" placeholder="123456-1234567"></td>
+                <td id="resultIdNum" class="error"></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td><input type="email" id="inputEmail" placeholder="abc@defh.com"></td>
+                <td id="resultEmail" class="error"></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td><button id="btn">submit</button></td>
+            </tr>           
+        </table>
+    </form>
+
+    <script src="../js/회원가입양식.js"></script>
+</body>
+</html>
