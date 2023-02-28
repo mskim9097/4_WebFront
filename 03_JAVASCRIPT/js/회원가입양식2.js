@@ -37,12 +37,12 @@ document.getElementById("inputName").addEventListener("keyup", function() {
     const resultName = document.getElementById("resultName");
 
     if(regExName.test(this.value)) {
-        resultName.innerText = "정상입력"
+        resultName.innerText = "정상입력";
         resultName.classList.add("confirm");
         resultName.classList.remove("error");
         
     } else {
-        resultName.innerText = "한글만 입력하세요"
+        resultName.innerText = "한글만 입력하세요";
         resultName.classList.remove("confirm");
         resultName.classList.add("error");
     }
@@ -73,3 +73,12 @@ function validate() {
         alert('전화번호의 형식이 올바르지 않습니다');
     }
 }
+
+const reset = document.getElementById("reset");
+
+reset.addEventListener("click", function() {
+    inputId.style.backgroundColor = "white"; 
+    inputId.style.color = "black";
+    resultPw1.innerText = "";
+    resultName.innerText = "";
+})
