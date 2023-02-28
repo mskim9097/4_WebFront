@@ -1,0 +1,13 @@
+fieldset {
+    width: 450px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.confirm {
+    color: green;
+    font-weight: bold;
+}
