@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>트랜지션 색깔박스</title>
-    <link rel="stylesheet" href="../css/트랜지션 색깔박스.css">
+    <title>10_연습문제</title>
 </head>
+
 <body>
+
     <div class="container">
-        <div class="box">
-            <div class="colorBox duration"></div>
-            <div><input text="text" class="inputBox duration" size="9"></div>
+        <div class="area">
+            <div class="box"></div>
+            <input type="text" class="box-color">
         </div>
-        <div class="box">
-            <div class="colorBox duration"></div>
-            <div><input text="text" class="inputBox duration" size="9"></div>
+        <div class="area">
+            <div class="box"></div>
+            <input type="text" class="box-color">
         </div>
-        <div class="box">
-            <div class="colorBox duration"></div>
-            <div><input text="text" class="inputBox duration" size="9"></div>
+        <div class="area">
+            <div class="box"></div>
+            <input type="text" class="box-color">
         </div>
-        <div class="box">
-            <div class="colorBox duration"></div>
-            <div><input text="text" class="inputBox duration" size="9"></div>
+        <div class="area">
+            <div class="box"></div>
+            <input type="text" class="box-color">
         </div>
-        <div class="box">
-            <div class="colorBox duration"></div>
-            <div><input text="text" class="inputBox duration" size="9"></div>
+        <div class="area">
+            <div class="box"></div>
+            <input type="text" class="box-color">
         </div>
     </div>
 
-    <br>
+    <p>
+        현재 transition-duration : <span id="print1">0</span>초
+        <br><br>
 
-    현재 trasition-duration : <span id="currentTD">0초</span> <br><br>
-    trasition-duration 변경 : <input type="number" id="inputTD">
-    <button id="changeTD">변경</button><br><br>
-    <button type="reset" id="reset">초기화</button>
+        transition-duration 변경 :
+        <input type="number" id="input1">
+        <button id="btn1">변경</button>
 
+        <br><br>
 
-    
-
+        <button id="clearBtn">초기화</button>
+    </p>
     <script src="../js/트랜지션 색깔박스.js"></script>
 </body>
 </html>

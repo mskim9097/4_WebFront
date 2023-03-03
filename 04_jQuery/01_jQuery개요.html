@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_jQuery 개요</title>
+    
+    <!-- CDN 방식으로 jQuery 라이브러리 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <!-- 주의 사항 !
+        같은 라이브러리를 한 페이지에 중복해서 받는 일 없도록 해야한다.
+        충돌 발생 위험!
+    -->
+</head>
+<body>
+    <h1>jQuery 란?</h1>
+    <pre>
+        기존에 복잡했던 클라이언트 측 HTML 스크립팅을
+        간소화 하기 위해 고안된 Javascript 라이브러리.
+
+        jQuery는 작은양의 코드로 빠르고 풍부한 기능을 제공함.
+
+        ( * 라이브러리(library) : 프로그램, 프로그래밍 언어에 없는 추가적인 기능 )        
+    </pre>
+
+    <hr>
+
+    <h3>jQuery 라이브러리 연결 방법</h3>
+    <pre>
+        - jQuery 공식 홈페이지 : http://jquery.com/
+        - jQuery CDN 코드 제공 페이지 : http://code.jquery.com/
+
+        1. jQuery 라이브러리를 다운로드하여
+            external 방식으로 연결하는 방법
+
+        2. CDN(Content Delivery Network)을 이용하여
+            온라인 환경에서 페이지 로딩 시 다운로드하여 연결하는 방법
+    </pre>
+
+    <hr>
+
+    <h3>jquery 예시</h3>
+
+    <button type="button" id="btn1">자바스크립트 버튼</button>
+    <button type="button" id="btn2">제이쿼리 버튼</button>
+
+    <script>
+        document.getElementById("btn1").addEventListener("click", () => {
+            alert("자바스크립트 버튼이 클릭되었습니다");
+        });
+
+        $("#btn2").on("click", () => {
+            alert("제이쿼리 버튼이 클릭되었습니다");
+        });
+    </script>
+
+    <hr>
+
+    <h3>html 문서 해석 순서와 window.onload(), jQuery의 ready() 함수</h3>
+
+    <pre>
+        HTML문서는 항상 위에서 아래로 순서대로 해석된다.
+        -> 아랫쪽에 작성되어 아직 해석이 안된 코드는 사용할 수 없다.
+
+        window.onload() : HTML(현재 창)이 모두 로딩 되었을 때 라는 이벤트 리스너
+            -> 일단 HTML 문서 내용을 모두 다 해석한 후
+                마지막에 onload 옆에 작성된 함수 수행
+
+
+        * window.onload의 단점 : 한 페이지 내에서 한번만 작성할 수 있다.
+                                (여러번 작성되면 마지막 내용이 수행됨)
+
+
+        jquery의 ready() 함수 : HTML 문서 로딩이 완료된 후 수행할 기능을 작성하는 함수.
+                                + onload의 단점인 한번만 작성할 수 있다라는 점을 개선함 
+                                == 여러번 작성 가능
+
+
+        ** 중요 ! jQuery를 나타내는 기오는 '$' 이다
+
+        - ready() 함수 작성 방법 3가지
+        1. jQuery(document).ready(function() { 코드; });
+
+        2. $(document).ready(function() { 코드; });
+
+        3. $(function() { 코드; });
+
+
+    </pre>
+
+    <script>
+        // test1 아이디를 가지는 요소가 해석되기 전에 내용을 추가하기 때문에
+        // 해당 코드는 정상 수행되지 않음.       
+        // document.getElementById("test1").innerText = "HTML 해석 순서 테스트";
+        
+        window.onload = function() {
+            document.getElementById("test1").innerText = "HTML 해석 순서 테스트";
+        }
+
+        window.onload = function() {
+            console.log("마지막으로 작성된 onload")
+        }
+    </script>
+
+    <p id="test1"></p>
+
+    <hr>
+
+    <!-- ready() 함수 테스트 -->
+    <script>
+
+        // 문서 로딩이 완료된 후 마지막에 수행
+        jQuery(document).ready(function() {
+            $("#test2").text("ready() 함수 테스트");
+            // $("#test2") : 아이디가 test2인 요소
+            // .text("ready() 함수테스트") : 요소의 내용으로 "ready() 함수테스트"를 출력
+            // text() == innerText
+        });
+
+
+        $(document).ready(function() {
+            $("#test2").css("backgroundColor", "pink");
+            // .css("backgroundColor", "pink") : 배경색을 pink 로 변경
+            // css() == style
+        });
+
+
+        $(function() {
+            $("#test2").css("fontSize", "30px");
+
+            console.log("자바스크립트 코드로 사용 가능!");
+            document.getElementById("test2").style.fontWeight = "bold";
+
+            document.getElementById("test2").innerText += "새로운 내용 추가";
+        });
+    </script>
+
+    <p id="test2"></p>
+</body>
+</html>
