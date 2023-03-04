@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        시험범위 js jquery html 몇개
+
+input태그 타입(text password url tel email number range date month 
+        week time datetime-local radio checkbox color file hidden)
+
+        
+04_변수와자료형
+var : 변수, 변수명 중복 O(덮어쓰기), 함수 레벨 scope 3순위
+let : 변수, 변수명 중복 X, 블록 {} 레벨 scope 2순위
+const : 상수, 변수명 중복 X, 블록 {} 레벨 scope 1순위
+
+JS의 자료형(별도 지정X 리터럴값에 의해서 결정)
+string(문자열) number(숫자(정수,실수)) boolean(논리값) object(객체)
+function(함수) undifined(자료형 정의X) null은 자료형X
+
+typeof 변수명 : 해당 변수의 자료형을 반환하는 연산자
+-----------------------------------------------------------
+
+08_형변환,연산자
+
+숫자(number) 타입 리터럴 표기법
+- 123(정수), 9.321(실수), NaN(Not a Number), Infinity(무한)
+----------------------------------------------------------
+09_배열(변수를 묶음으로 다루는 것(연속적으로 나열))
+
+특징 0. 값이 저장되기 전까지 자료형 지정X 1. 자료형 제한X 2. 길이 제한X
+배열 선언 방법 const arr = new Array(); / new Array(3);
+                        []; / ['사과', '딸기', '바나나'];
+.push():마지막요소로 추가
+.pop():마지막 요소를 꺼내옴
+.indexOf("값") : 값의 index 반환 없으면 -1
+.sort([정렬기준 함수]) : 오름차순 정렬(문자열)
+.toString() : 하나의 문자열로 출력, 사이에 (, 추가)
+.join("구분자") : 하나의 문자열로 출력, 사이에 ("구분자")추가
+
+for문
+1. 일반for문 (for(let i = 0; i < arr4.length; i++))
+2. 배열.forEach( function(item, index) { 반복수행 코드 } )
+3. for( item of 배열(또는 컬렉션)) {}
+4. for (let key in 객체)
+----------------------------------------------------------
+10_window내장객체
+
+BOM(Browser Object Model) : location, history, screen, navigator
+----------------------------------------------------------
+
+
+** 중요 **
+JS 객체의 key는 무조건 string(묵시적으로 string)
+-> key 작성시, "", '', (따옴표X)든 모두 string 인식
+
+15_함수 중요중요
+
+ // ready() 함수 : 문서가 로딩된 후 마지막에 수행하는 함수
+
+
+
+
+NaN infinity undefined
+
+브라우저 객체 모델(BOM)에 속한애(3개이상 외어라)
+
+자바스크립 작성하는 방식 external inline internal
+
+
+
+
+js에서 배열선언 초기화할때 방식 2가지 이상
+
+js 원시타입(자료형 number bolean string undefined)이랑 참조타입(객체 배열 함수)(객체의 주소참조, 원본데이터 바뀌면 복사본도 바뀜)
+
+웹표준과 관련된 기술 CSS XML DOM 이크마스크립트 HTML Javascript
+
+cdn방식말고 딴방법이면 상대경로 연결하는 방법 현재프로젝트파일위치 어디고 js파일어디에있는지
+
+화살표함수에서 this대신 쓸수있는거
+
+jQuery 라이브러리 적용안해서 나오는 에러
+Uncaught ReferenceError : $ is not defined
+    </pre>
+</body>
+</html>
