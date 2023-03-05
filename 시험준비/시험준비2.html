@@ -12,8 +12,18 @@
 
 input태그 타입(text password url tel email number range date month 
         week time datetime-local radio checkbox color file hidden)
+------------------------------------------------------------
+01_JS개요
 
-        
+Web표준과 관련된 기술들
+HTML, CSS, Javascript, XML, DOM, ECMAScript
+
+자바스크립트 작성 방법  
+1. 브라우저 콘솔에 직접 작성
+2. html 내부에 script 태그를 이용해서 작성(internal)
+3. html 외부에 (.js)파일을 이용해서 작성(external)
+4. 태그에 직접 JS코드를 작성(inline)
+------------------------------------------------------------        
 04_변수와자료형
 var : 변수, 변수명 중복 O(덮어쓰기), 함수 레벨 scope 3순위
 let : 변수, 변수명 중복 X, 블록 {} 레벨 scope 2순위
@@ -52,41 +62,48 @@ for문
 10_window내장객체
 
 BOM(Browser Object Model) : location, history, screen, navigator
+
 ----------------------------------------------------------
-
-
-** 중요 **
+11_JS객체
 JS 객체의 key는 무조건 string(묵시적으로 string)
 -> key 작성시, "", '', (따옴표X)든 모두 string 인식
+----------------------------------------------------------
+15_함수
+화살표 함수 내부에서 this 사용 불가 --> e.target으로 대체
+
+
+
+js  원시타입(자료형 number boolean string undefined)
+    참조타입(객체 배열 함수)(객체의 주소참조)
+----------------------------------------------------------
+01_jQuery 개요
+
+연결방법 1. jQuery 라이브러리를 다운로드하여 external 방식으로 연결
+        2. CDN(Content Delivery Network)을 이용하여 온라인 환경에서
+            페이지 로딩 시 다운로드하여 연결하는 방법
+
+ready() 함수 : HTML 문서 로딩이 완료된 후 수행할 기능을 작성하는 함수.
+            + onload의 단점인 한번만 작성할 수 있다라는 점을 개선함 
+            == 여러번 작성 가능
+
+- ready() 함수 작성 방법 3가지
+    1. jQuery(document).ready(function() { 코드; });
+    2. $(document).ready(function() { 코드; });
+    3. $(function() { 코드; });
+
+Uncaught ReferenceError : $ is not defined
+-> jQuery 라이브러리 적용안해서 나오는 에러
+---------------------------------------------------
+
 
 15_함수 중요중요
 
- // ready() 함수 : 문서가 로딩된 후 마지막에 수행하는 함수
 
 
 
 
-NaN infinity undefined
 
-브라우저 객체 모델(BOM)에 속한애(3개이상 외어라)
-
-자바스크립 작성하는 방식 external inline internal
-
-
-
-
-js에서 배열선언 초기화할때 방식 2가지 이상
-
-js 원시타입(자료형 number bolean string undefined)이랑 참조타입(객체 배열 함수)(객체의 주소참조, 원본데이터 바뀌면 복사본도 바뀜)
-
-웹표준과 관련된 기술 CSS XML DOM 이크마스크립트 HTML Javascript
-
-cdn방식말고 딴방법이면 상대경로 연결하는 방법 현재프로젝트파일위치 어디고 js파일어디에있는지
-
-화살표함수에서 this대신 쓸수있는거
-
-jQuery 라이브러리 적용안해서 나오는 에러
-Uncaught ReferenceError : $ is not defined
     </pre>
+
 </body>
 </html>
