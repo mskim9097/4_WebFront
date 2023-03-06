@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_순회(탐색)메소드3</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+        .wrap, .wrap * {
+            border: 1px solid lightgray;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>순회(탐색) 메소드</h1>
+    <h3>
+        sideways(옆으로, 옆에서) 메서드 :
+        같은 레벨에 있는 요소(형제)를 선택할 수 있는 메서드
+    </h3>
+    <pre>
+        $('요소명').siblings([매개변수])
+        - 선택된 요소와 같은 레벨(형제)에 있는 모든 요소 리턴
+        - 매개변수가 있으면 같은 레벨에 있는 요소 중 매개변수와 일치하는 모든 요소 리턴
+
+        $('요소명').next()
+        - 선택된 요소의 같은 레벨 중 선택된 요소 다음 한 개 요소 리턴
+        
+        $('요소명').nextAll()
+        - 선택된 요소의 같은 레벨 중 선택된 요소 다음의 모든 요소 리턴
+
+        $('요소명').nextUntil(매개변수)
+        - 선택된 요소의 같은 레벨 중 매개변수 이전 까지의 모든 요소 리턴(동생 요소)
+
+
+        $('요소명').prev()
+        - 선택된 요소의 같은 레벨 중 선택된 요소 이전 한 개 요소 리턴
+        
+        $('요소명').prevAll()
+        - 선택된 요소의 같은 레벨 중 선택된 요소 이전의 모든 요소 리턴
+
+        $('요소명').prevUntil(매개변수)
+        - 선택된 요소의 같은 레벨 중 매개변수 이전 까지의 모든 요소 리턴(형 요소)
+    
+    </pre>
+
+    <div class="wrap"> div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+    <ul>
+        <p>p태그</p>
+        <li>li1</li>
+        <li>li2</li>
+        <li class="prevTest">li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <p>p태그</p>
+    </ul>
+
+    <span>테스트용 span 태그</span>
+    <h2>테스트용 h2 태그</h2>
+
+    <script>
+        const style1 = {"border":"2px solid red", "color":"red"};
+        const style2 = {"border":"2px solid orange", "color":"orange"};
+        const style3 = {"border":"2px solid yellow", "color":"yellow"};
+        const style4 = {"border":"2px solid green", "color":"green"};
+        const style5 = {"border":"2px solid blue", "color":"blue"};
+
+        // siblings() : 선택한 요소의 형제 요소를 모두 선택
+        // h2태그의 형제 요소에 스타일로 style1을 설정
+        $("h2").siblings().css(style1);
+
+        // h2 태그의 형제 요소 중 p태그만 style2 적용
+        $("h2").siblings("p").css(style2);
+
+        // next() : 선택된 요소의 다음 형제 요소를 선택하는 메소드
+        // span 태그 다음에 오는 형제 요소의 스타일을 style3으로 설정
+        $("span").next().css(style3);
+
+        //nextAll() : 선택된 요소의 다음 모든 형제 요소를 선택하는 메서드
+        // h2태그 다음에 오는 모든 형제 요소의 스타일을 style4로 설정
+        $("h2").nextAll().css(style4);
+
+        // nextUntil() - 동생 / prevUntil() - 형
+        $(".prevTest").prevUntil("p").css("fontSize", "50px");
+        $(".prevTest").nextUntil("p").css("fontSize", "10px");
+
+
+        // is("CSS선택자")
+        // 지정된 범위 내에 매개변수로 지정된 선택자와 일치하는 요소가
+        // 존재하는지 확인하는 메서드
+        // 존재하면 true, 없으면 false
+
+        // h2태그 이전에 있는 모든 형제 요소중 p태그가 있는지 확인
+        console.log( $("h2").prevAll().is("p") );
+        console.log( $("h2").prevAll().is("pre") );
+
+        $("span").on("click", function() {
+            console.log("span 태그 클릭됨.");
+
+            console.log($(this));
+            console.log(this);
+
+            // 이벤트 핸들러 (이벤트 발생 시 동작을 지정하는 함수)
+            // 내부에 작성된 this라는 단어는
+            // 이벤트가 발생한 요소를 나타낸다. (자바스크립트 기준 시점)
+        });
+
+        $("h2").on("click", function() {
+            // h2 태그를 클릭했을 때
+            // 클릭한 요소의 이전 요소의
+            // 배경색을 red, 글자색 white로 설정
+
+            // $(this) : 이벤트 발생한 요소 선택
+            console.log($(this).prev());
+            $(this).prev().css({"backgroundColor":"red", "color":"white"});
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_effect메소드2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+        div {
+            width: 300px;
+            height: 30px;
+            background-color: yellowgreen;
+            color: orangered;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid green;
+            cursor: pointer;
+        }
+
+        p.contents {
+            border: 1px solid lightgray;
+            width: 300px;
+            height: 200px;
+            display: none; /* 화면에서 보이지 않음 */
+        }
+    </style>
+</head>
+<body>
+    <h1>slide 메소드</h1>
+    <h3>slideDown()과 slideUp()</h3>
+    <p>$(selector).slideUp([speed, easing, callback])</p>
+
+    <div>첫 번째 메뉴</div>
+    <p class="contents">1</p>
+    <div>두 번째 메뉴</div>
+    <p class="contents">2</p>
+    <div>세 번째 메뉴</div>
+    <p class="contents">3</p>
+    <div>네 번째 메뉴</div>
+    <p class="contents">4</p>
+    <div>다섯 번째 메뉴</div>
+    <p class="contents">5</p>
+
+    <script>
+        $(function() {
+            $("div").on("click", function() {
+
+                if($(this).next("p").css("display") == 'none') {
+
+                    $(this).siblings("p.contents").slideUp();
+                    // 다음 요소는 내려라
+                    $(this).next().slideDown();
+
+                } else {
+                    $(this).next().slideUp();
+                }
+                
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_jQuery메소드와 이벤트</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+        .cls1 {
+            color: red;
+        }
+        .lime {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <p class="cls1">기존에 작성되어있는 요소</p>
+    </div>
+
+    <button type="button" id="btn1">html() 메서드</button>
+
+    <script>
+        // html() : 요소에 작성된 내용을 얻어옴(태그 포함) == innerHTML
+        // text() : 요소에 작성된 내용을 얻어옴(태그 미포함) == innerText
+        // val() : value 속성 값을 얻어옴
+
+        // html("내용") : 요소에 내용 출력(태그 인식 O)
+        // text("내용") : 요소에 내용 출력(태그 인식 X)
+        // val("내용") : value 속성의 값을 지정
+
+        // html() 버튼
+        $("#btn1").on("click", function() {
+            // 아이디가 area인 요소의 내용을 모두 삭제
+            $("#area").html("");
+
+            // 아이디가 area인 요소에 내용 출력
+            $("#area").html("<p class='cls1'>html() 메서드로 작성된 내용</p>");
+        });
+    </script>
+
+    <hr>
+
+    <h3>객체(요소) 삽입 메서드</h3>
+    <pre>
+        선택자 요소(A)를 기준으로 삽입 메서드 매개변수에
+        생성된 요소(B) 또는 함수의 리턴값을 추가
+
+        $(A).append(B): A요소 내 뒷부분에 B를 추가(자식)
+        $(A).prepend(B) : A요소 내 앞부분에 B를 추가(자식)
+        $(A).after(B) : A요소 뒷 부분에 B를 추가(형제)
+        $(A).before(B) : A요소 앞 부분에 B를 추가(형제)
+
+        생성된 요소(B)를 매개변수로 지정한 선택자(A) 요소에 추가
+        $(B).appendTo(A) : B를 A의 요소 내 뒷부분에 추가(자식)
+        $(B).prependTo(A) : B를 A의 요소 내 앞부분에 추가(자식)
+        $(B).insertAfter(A) : B를 A의 요소 뒤에 추가(형제)
+        $(B).insertBefore(A) : B를 A의 요소 앞에 추가(형제)
+    </pre>
+
+    <div id="area2">
+        <ul id="list2"></ul> <!-- 기준 -->
+    </div>
+
+    <script>
+        $(function() {
+            let count = 1;
+
+            $("#list2").append("<li>리스트" + count++ + "</li>");
+            $("#list2").append("<li>리스트" + count++ + "</li>");
+            $("#list2").append("<li>리스트" + count++ + "</li>");
+
+            $("#list2").prepend("<li>리스트" + count++ + "</li>");
+            $("#list2").prepend("<li>리스트" + count++ + "</li>");
+            $("#list2").prepend("<li>리스트" + count++ + "</li>");
+
+            for(let i=0; i<3; i++) {
+                const el = "<p>새로 추가된 요소" + i + "</p>";
+
+                $("#list2").before(el);
+                $("#list2").after(el);
+            }
+
+        });
+    </script>
+
+    <button type="button" id="btn2-1">empty()</button>
+    <button type="button" id="btn2-2">remove()</button>
+    <button type="button" id="btn2-3">detach()</button>
+
+    <div id="area3">
+        <div class="item" id="div3">안녕하세요</div>
+        <div class="item" id="div3">안녕하세요</div>
+    </div>
+
+    <hr>
+
+    <div id="area4">
+        <div class="item" id="div3">안녕하세요</div>
+    </div>
+
+    <script>
+        $("#div3").hover( function() {
+            // 마우스가 들어왔을 때 현재 요소에 lime클래스 추가
+            $(this).addClass("lime");
+        },
+        function() {
+            // 마우스가 나갔을 때 현재 요소에서 lime 클래스 제거
+            $(this).removeClass("lime");
+        });
+
+        // empty() 버튼
+        // empty() : 자식 요소들을 모두 제거하는 메서드
+        //          -> 특정 요소 내부를 비움
+        $("#btn2-1").on("click", function() {
+            // id가 area3인 요소의 내부를 비움
+            $("#area3").empty();
+        });
+
+        // remove() 버튼
+        // 요소 잘라내기, 관련 이벤트 삭제
+        $("#btn2-2").on("click", function() {
+            const el = $("#div3").remove();
+            $("#area4").append(el);
+        });
+
+
+        // detach() 버튼
+        // 요소 잘라내기, 관련 이벤트도 같이 잘라냄
+        $("#btn2-3").on("click", function() {
+            const el = $("#div3").detach();
+            $("#area4").append(el);
+        });
+    </script>
+</body>
+</html>

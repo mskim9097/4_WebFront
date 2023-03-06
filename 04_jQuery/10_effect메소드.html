@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_effect메소드</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+        .area {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>시각적 효과를 위한 Effect 메소드</h1>
+    <p>요소에 애니메이션 효과를 만들기 위한 메소드 집합</p>
+
+    <pre>
+    1. $('요소명').메소드명();
+    2. $('요소명').메소드명([speed]);
+    3. $('요소명').메소드명([speed], [easing], [callback]);
+    speed : 실행속도(밀리세컨초) / 숫자 or slow, fast
+    easing : 변경되는 지점별 속도 / linear, swing 가능
+    callback : 메소드 실행 후 실행할 함수
+    </pre>
+
+    <hr>
+
+    <h3>show() / hide() 메소드</h3>
+    <pre>
+        요소를 점점 커지게 하면서 화면에 나타나거나
+        요소를 점점 작게 하면서 화면에서 숨기는 메서드
+    </pre>
+
+    <button type="button" id="show-btn">show()</button>
+    <button type="button" id="hide-btn">hide()</button>
+
+    <div class="area">
+        <img id="img1" src="images/피카츄.gif">
+    </div>
+
+    <script>
+        $("#show-btn").on("click", function() {
+            $("#img1").show(500); // 1000ms == 1s
+        });
+
+        $("#hide-btn").on("click", function() {
+            $("#img1").hide(500); // 1000ms == 1s
+        });
+    </script>
+
+    <hr>
+
+    <h3>fadeIn() / fadeOut() 메소드</h3>
+    <pre>
+        fadeIn() : 점점 불투명해지면서 나타남
+        fadeOut() : 점점 투명해지면서 사라짐
+    </pre>
+
+    <button type="button" id="fadeIn-btn">fadeIn()</button>
+    <button type="button" id="fadeOut-btn">fadeOut()</button>
+
+    <div class="area">
+        <img id="img2" src="images/cute1.gif">
+    </div>
+
+    <script>
+        $("#fadeIn-btn").on("click", function() {
+            $("#img2").fadeIn(500);
+        });
+
+        $("#fadeOut-btn").on("click", function() {
+            $("#img2").fadeOut(500);
+        });
+    </script>
+</body>
+</html>
